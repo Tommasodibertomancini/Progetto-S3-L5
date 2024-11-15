@@ -43,22 +43,27 @@ console.log('es D:', newMe);
 /* ESERCIZIO E
   Crea del codice per aggiungere programmaticamente all'oggetto precedentemente creato un array chiamato "skills", contenente i linguaggi di programmazione che conosci.
 */
-me.skills = ['HTML', 'CSS', 'Javascript'];
-console.log('es E:', me);
+
+const mySkills = { ...me}
+mySkills.skills = ['HTML', 'CSS', 'Javascript'];
+console.log('es E:', mySkills);
 
 /* ESERCIZIO F
   Crea un pezzo di codice per aggiungere un nuovo elemento all'array "skills" contenuto nell'oggetto "me".
 */
-me.skills.push('Python');
+let newSkill = 'Python'
+mySkills.skills.push(newSkill);
 
-console.log('es F:', me);
+console.log('es F:', mySkills);
 
 /* ESERCIZIO G
   Crea un pezzo di codice per rimuovere programmaticamente l'ultimo elemento dall'array "skills" contenuto nell'oggetto "me".
 */
-me.skills.pop();
 
-console.log('es G:', me);
+const meTwo = { ...mySkills };
+meTwo.skills.pop();
+
+console.log('es G:', meTwo);
 
 // Funzioni
 
@@ -194,7 +199,7 @@ function rollTheDices(number) {
   return result;
 }
 
-const myRoll = 2;
+const myRoll = 4;
 
 console.log('es 8:', rollTheDices(myRoll));
 
