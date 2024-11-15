@@ -13,13 +13,13 @@ REGOLE
   Crea una variabile chiamata "sum" e assegnaci il risultato della somma tra i valori 10 e 20.
 */
 let sum = 10 + 20;
-console.log('es A', sum);
+console.log('es A:', sum);
 
 /* ESERCIZIO B
   Crea una variabile chiamata "random" e assegnaci un numero casuale tra 0 e 20 (deve essere generato dinamicamente a ogni esecuzione).
 */
 let random = Math.floor(Math.random() * 21);
-console.log('es B', random);
+console.log('es B:', random);
 
 /* ESERCIZIO C
   Crea una variabile chiamata "me" e assegnaci un oggetto contenente le seguenti proprietà: name = il tuo nome, surname = il tuo cognome, age = la tua età.
@@ -29,7 +29,7 @@ const me = {
   surname: 'Di Berto Mancini',
   age: 33,
 };
-console.log('es C', me);
+console.log('es C:', me);
 
 /* ESERCIZIO D
   Crea del codice per rimuovere programmaticamente la proprietà "age" dall'oggetto precedentemente creato.
@@ -38,27 +38,27 @@ console.log('es C', me);
 const newMe = { ...me };
 delete newMe.age;
 
-console.log('es D', newMe);
+console.log('es D:', newMe);
 
 /* ESERCIZIO E
   Crea del codice per aggiungere programmaticamente all'oggetto precedentemente creato un array chiamato "skills", contenente i linguaggi di programmazione che conosci.
 */
 me.skills = ['HTML', 'CSS', 'Javascript'];
-console.log('es E', me);
+console.log('es E:', me);
 
 /* ESERCIZIO F
   Crea un pezzo di codice per aggiungere un nuovo elemento all'array "skills" contenuto nell'oggetto "me".
 */
 me.skills.push('Python');
 
-console.log('es F', me);
+console.log('es F:', me);
 
 /* ESERCIZIO G
   Crea un pezzo di codice per rimuovere programmaticamente l'ultimo elemento dall'array "skills" contenuto nell'oggetto "me".
 */
 me.skills.pop();
 
-console.log('es G', me);
+console.log('es G:', me);
 
 // Funzioni
 
@@ -70,7 +70,7 @@ function dice() {
 }
 const myDice = dice();
 
-console.log('es 1', myDice);
+console.log('es 1:', myDice);
 
 /* ESERCIZIO 2
   Crea una funzione chiamata "whoIsBigger" che riceve due numeri come parametri e ritorna il maggiore dei due.
@@ -87,7 +87,7 @@ function whoIsBigger(a, b) {
   return compare;
 }
 
-console.log('es 2', whoIsBigger(22, 6));
+console.log('es 2:', whoIsBigger(22, 6));
 
 /* ESERCIZIO 3
   Crea una funzione chiamata "splitMe" che riceve una stringa come parametro e ritorna un'array contenente ogni parola della stringa.
@@ -99,7 +99,7 @@ function splitMe(string) {
   return string.split(' ');
 }
 const splitString = 'Ciao sono Tommaso';
-console.log('es 3', splitMe(splitString));
+console.log('es 3:', splitMe(splitString));
 
 /* ESERCIZIO 4
   Crea una funzione chiamata "deleteOne" che riceve una stringa e un booleano come parametri.
@@ -116,8 +116,8 @@ function deleteOne(string, boolean) {
 
 const newString = 'Paperino';
 
-console.log('es 4', deleteOne(newString, true));
-console.log('es 4', deleteOne(newString, false));
+console.log('es 4:', deleteOne(newString, true));
+console.log('es 4:', deleteOne(newString, false));
 
 /* ESERCIZIO 5
   Crea una funzione chiamata "onlyLetters" che riceve una stringa come parametro e la ritorna eliminando tutte le cifre numeriche.
@@ -130,7 +130,7 @@ function onlyLetters(string) {
 }
 const myString = 'I have 3 cars and 2 cats';
 
-console.log('es 5', onlyLetters(myString));
+console.log('es 5:', onlyLetters(myString));
 
 /* ESERCIZIO 6
   Crea una funzione chiamata "isThisAnEmail" che riceve una stringa come parametro e ritorna true se la stringa è un valido indirizzo email.
@@ -143,8 +143,8 @@ function isThisAnEmail(string) {
 const myEmail = 'tommydbm@gmail.com';
 const mySecondEmail = 'tommy@gmail';
 
-console.log('es 6', isThisAnEmail(myEmail));
-console.log('es 6', isThisAnEmail(mySecondEmail));
+console.log('es 6:', isThisAnEmail(myEmail));
+console.log('es 6:', isThisAnEmail(mySecondEmail));
 
 /* ESERCIZIO 7
   Scrivi una funzione chiamata "whatDayIsIt" che ritorna il giorno della settimana corrente.
@@ -165,7 +165,7 @@ function whatDayIsIt() {
   return days[todayIs];
 }
 
-console.log('es 7', whatDayIsIt());
+console.log('es 7:', whatDayIsIt());
 
 /* ESERCIZIO 8
   Scrivi una funzione chiamata "rollTheDices" che riceve un numero come parametro.
@@ -195,7 +195,7 @@ function rollTheDices(number) {
 
 const myRoll = 2;
 
-console.log('es 8', rollTheDices(myRoll));
+console.log('es 8:', rollTheDices(myRoll));
 
 /* ESERCIZIO 9
   Scrivi una funzione chiamata "howManyDays" che riceve una data come parametro e ritorna il numero di giorni trascorsi da tale data.
@@ -212,8 +212,8 @@ function howManyDays(date) {
 const myWeddingDate = '2024-06-22';
 const myBirthDate = '1991-08-17';
 
-console.log('es 9', howManyDays(myWeddingDate));
-console.log('es 9', howManyDays(myBirthDate));
+console.log('es 9:', howManyDays(myWeddingDate));
+console.log('es 9:', howManyDays(myBirthDate));
 
 /* ESERCIZIO 10
   Scrivi una funzione chiamata "isTodayMyBirthday" che deve ritornare true se oggi è il tuo compleanno, falso negli altri casi.
@@ -228,7 +228,7 @@ function isTodayMyBirthday() {
   );
 }
 
-console.log('es 10', isTodayMyBirthday());
+console.log('es 10:', isTodayMyBirthday());
 
 // Arrays & Oggetti
 
@@ -348,21 +348,55 @@ const movies = [
     Poster:
       'https://m.media-amazon.com/images/M/MV5BMTc5MDE2ODcwNV5BMl5BanBnXkFtZTgwMzI2NzQ2NzM@._V1_SX300.jpg',
   },
-]
-
+];
 
 /* ESERCIZIO 11
   Scrivi una funzione chiamata "deleteProp" che riceve un oggetto e una stringa come parametri; deve ritornare l'oggetto fornito dopo aver eliminato
   in esso la proprietà chiamata come la stringa passata come secondo parametro.
 */
 
+function deleteProp(object, string) {
+  const newObject = { ...object };
+  delete newObject[string];
+  return newObject;
+}
+
+const myObject = {
+  name: 'Kobe',
+  surname: 'Bryant',
+  number: 24,
+};
+
+const secondObject = deleteProp(myObject, 'surname');
+console.log('es 11:', secondObject);
+
 /* ESERCIZIO 12
   Scrivi una funzione chiamata "newestMovie" che trova il film più recente nell'array "movies" fornito.
 */
 
+function newestMovie(movies) {
+  let newest = movies[0];
+
+  for (let i = 1; i < movies.length; i++) {
+    if (parseInt(movies[i].Year) > parseInt(newest.Year)) {
+      newest = movies[i];
+    }
+  }
+  return newest;
+}
+
+console.log('es 12:', newestMovie(movies));
+
 /* ESERCIZIO 13
   Scrivi una funzione chiamata countMovies che ritorna il numero di film contenuti nell'array "movies" fornito.
 */
+
+function countMovies(movies) {
+  return movies.length;
+}
+
+const moviesCount = countMovies(movies);
+console.log('es 13:', moviesCount);
 
 /* ESERCIZIO 14
   Scrivi una funzione chiamata "onlyTheYears" che crea un array con solamente gli anni di uscita dei film contenuti nell'array "movies" fornito.
