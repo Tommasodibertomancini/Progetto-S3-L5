@@ -125,17 +125,47 @@ console.log('es 4', deleteOne(newString, false));
   Es.: onlyLetters("I have 4 dogs") => ritorna "I have dogs"
 */
 
+function onlyLetters(string) {
+  return string.replaceAll(/[0-9]/g, '');
+}
+const myString = 'I have 3 cars and 2 cats';
 
-
-
+console.log('es 5', onlyLetters(myString));
 
 /* ESERCIZIO 6
   Crea una funzione chiamata "isThisAnEmail" che riceve una stringa come parametro e ritorna true se la stringa è un valido indirizzo email.
 */
 
+function isThisAnEmail(string) {
+  const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+  return emailRegex.test(string);
+}
+const myEmail = 'tommydbm@gmail.com';
+const mySecondEmail = 'tommy@gmail';
+
+console.log('es 6', isThisAnEmail(myEmail));
+console.log('es 6', isThisAnEmail(mySecondEmail));
+
 /* ESERCIZIO 7
   Scrivi una funzione chiamata "whatDayIsIt" che ritorna il giorno della settimana corrente.
 */
+
+function whatDayIsIt() {
+  const days = [
+    'Domenica',
+    'Lunedì',
+    'Martedì',
+    'Mercoledì',
+    'Giovedì',
+    'Venerdì',
+    'Sabato',
+  ];
+  const today = new Date();
+  const todayIs = today.getDay();
+  return days[todayIs];
+}
+
+console.log('es 7', whatDayIsIt());
 
 /* ESERCIZIO 8
   Scrivi una funzione chiamata "rollTheDices" che riceve un numero come parametro.
@@ -149,6 +179,8 @@ console.log('es 4', deleteOne(newString, false));
       values: [3, 3, 4]
   }
 */
+
+
 
 /* ESERCIZIO 9
   Scrivi una funzione chiamata "howManyDays" che riceve una data come parametro e ritorna il numero di giorni trascorsi da tale data.
