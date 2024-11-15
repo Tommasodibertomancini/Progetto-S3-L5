@@ -437,22 +437,64 @@ console.log('es 16:', totalYears);
   Scrivi una funzione chiamata "searchByTitle" che riceve una stringa come parametro e ritorna i film nell'array "movies" fornito che la contengono nel titolo.
 */
 
+function searchByTitle(movies, string) {
+  const findMovie = movies.filter((movie) =>
+    movie.Title.toLowerCase().includes(string.toLowerCase())
+  );
+  return findMovie;
+}
 
+const searchedString = 'Rings';
+const moviesList = searchByTitle(movies, searchedString);
+
+console.log('es 17:', moviesList);
 
 /* ESERCIZIO 18
   Scrivi una funzione chiamata "searchAndDivide" che riceve una stringa come parametro e ritorna un oggetto contenente due array: "match" e "unmatch".
   "match" deve includere tutti i film dell'array "movies" fornito che contengono la stringa fornita all'interno del proprio titolo, mentre "unmatch" deve includere tutti i rimanenti.
 */
 
+function searchAndDivide(searchString, movies) {
+  const result = {
+    match: [],
+    unmatch: [],
+  };
+
+  movies.forEach((movie) => {
+    if (movie.Title.toLowerCase().includes(searchString.toLowerCase())) {
+      result.match.push(movie);
+    } else {
+      result.unmatch.push(movie);
+    }
+  });
+
+  return result;
+}
+const result = searchAndDivide('Avengers', movies);
+
+console.log('es 18:', result.match);
+console.log('es 18:', result.unmatch);
+
 /* ESERCIZIO 19
   Scrivi una funzione chiamata "removeIndex" che riceve un numero come parametro e ritorna l'array "movies" fornito privo dell'elemento nella posizione ricevuta come parametro.
 */
+
+function removeIndex(movies, index) {
+  const filmArray = movies.filter((movie, i) => i !== index);
+  return filmArray;
+}
+
+const removeI = 7;
+const newArray = removeIndex(movies, removeI);
+console.log('es 19:', newArray);
 
 // DOM (nota: gli elementi che selezionerai non si trovano realmente nella pagina)
 
 /* ESERCIZIO 20
   Scrivi una funzione per selezionare l'elemento dotato di id "container" all'interno della pagina.
 */
+
+
 
 /* ESERCIZIO 21
   Scrivi una funzione per selezionare ogni tag <td> all'interno della pagina.
