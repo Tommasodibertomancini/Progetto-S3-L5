@@ -128,6 +128,7 @@ console.log('es 4:', deleteOne(newString, false));
 function onlyLetters(string) {
   return string.replaceAll(/[0-9]/g, '');
 }
+
 const myString = 'I have 3 cars and 2 cats';
 
 console.log('es 5:', onlyLetters(myString));
@@ -609,3 +610,17 @@ halfTree(4);
 /* ESERCIZIO 29
   Crea una funzione chiamata "isItPrime" che riceve un numero come parametro e ritorna true se il numero fornito è un numero primo.
 */
+function isItPrime(number) {
+  if (number <= 1) {
+    return false;
+  }
+  for (let i = 2; i <= Math.sqrt(number); i++) {
+    if (number % i === 0) {
+      return false;
+    }
+  }
+  return true;
+}
+
+console.log('es 29:', isItPrime(17));
+console.log('es 29:', isItPrime(1));
