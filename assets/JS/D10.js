@@ -494,13 +494,19 @@ console.log('es 19:', newArray);
   Scrivi una funzione per selezionare l'elemento dotato di id "container" all'interno della pagina.
 */
 
-const container = document.getElementById('container');
+function selectContainer() {
+  const container = document.getElementById('container');
+  return container;
+}
 
 /* ESERCIZIO 21
   Scrivi una funzione per selezionare ogni tag <td> all'interno della pagina.
 */
 
-const selectTd = document.querySelectorAll('td');
+function selectAllTd() {
+  const tdElements = document.querySelectorAll('td');
+  return tdElements;
+}
 
 /* ESERCIZIO 22
   Scrivi una funzione che, tramite un ciclo, stampa in console il testo contenuto in ogni tag <td> all'interno della pagina.
@@ -518,17 +524,49 @@ printAllTd();
   Scrivi una funzione per aggiungere un background di colore rosso a ogni link all'interno della pagina.
 */
 
+function linksBackground() {
+  const links = document.querySelectorAll('a');
+  links.forEach((link) => {
+    link.style.backgroundColor = 'red';
+  });
+}
+
+linksBackground();
+
 /* ESERCIZIO 24
   Scrivi una funzione per aggiungere un nuovo elemento alla lista non ordinata con id "myList".
 */
+
+function addList() {
+  const myList = document.getElementById('myList');
+  const newLi = document.createElement('li');
+  newLi.innerText = 'Elemento aggiunto in JS';
+  myList.appendChild(newLi);
+}
+
+addList();
 
 /* ESERCIZIO 25
   Scrivi una funzione per svuotare la lista non ordinata con id "myList".
 */
 
+function emptyList() {
+  const myList = document.getElementById('myList');
+  myList.innerHTML = '';
+}
+emptyList();
+
 /* ESERCIZIO 26
   Scrivi una funzione per aggiungere ad ogni tag <tr> la classe CSS "test"
 */
+
+function addClassTr() {
+  const trElements = document.querySelectorAll('tr');
+  for (let i = 0; i < trElements.length; i++) {
+    trElements[i].classList.add('test');
+  }
+}
+addClassTr();
 
 // [EXTRA] JS Avanzato
 
@@ -543,6 +581,18 @@ printAllTd();
   ***
 
 */
+
+function halfTree(height) {
+  for (let i = 0; i < height; i++) {
+    let row = '';
+    for (let j = 0; j <= i; j++) {
+      row += '*';
+    }
+    console.log('es 27', row);
+  }
+}
+
+halfTree(4);
 
 /* ESERCIZIO 28
   Crea una funzione chiamata "tree" che riceve un numero come parametro e costruisce un albero di "*" (asterischi) dell'altezza fornita.
